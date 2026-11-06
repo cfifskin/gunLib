@@ -41,5 +41,5 @@ for _, module in ipairs(MODULES) do
     end
 end
 
--- "gunhelp" works from any directory.
-if shell and fs.exists("/gunhelp.lua") then shell.setAlias("gunhelp", "/gunhelp.lua") end
+-- Topics in /help work with the help program: help gunLib
+if help and not help.path():find(":/help", 1, true) then help.setPath(help.path() .. ":/help") end

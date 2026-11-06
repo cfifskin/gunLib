@@ -6,7 +6,7 @@ local all = args[1] == "all"
 
 local FILES = {
     "lib/ballistics.lua", "lib/gun.lua",
-    "startup/00_gunlib.lua", "gunhelp.lua",
+    "startup/00_gunlib.lua", "help/gunLib.md",
     ".gunlib_tmp", -- left over by an interrupted download
 }
 local EXAMPLES = { "gun_aim_example.lua", "gun_track_example.lua" }
@@ -33,7 +33,7 @@ if all then
 end
 removeIfEmpty("lib")
 removeIfEmpty("startup")
-if shell then shell.clearAlias("gunhelp") end
+removeIfEmpty("help")
 
 -- Unregister the modules, so new programs no longer find them without a reboot.
 local registry = debug and debug.getregistry and debug.getregistry()

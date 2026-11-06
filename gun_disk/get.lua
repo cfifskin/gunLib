@@ -5,7 +5,7 @@
 --   wget run https://raw.githubusercontent.com/cfifskin/gunLib/main/gun_disk/get.lua disk
 local BASE = "https://raw.githubusercontent.com/cfifskin/gunLib/main/gun_disk/"
 local FILES = {
-    "ballistics.lua", "gun.lua", "install.lua", "uninstall.lua", "loader.lua", "startup.lua", "gunhelp.lua",
+    "ballistics.lua", "gun.lua", "install.lua", "uninstall.lua", "loader.lua", "startup.lua", "gunLib.md",
     "example_aim.lua", "example_track.lua",
 }
 

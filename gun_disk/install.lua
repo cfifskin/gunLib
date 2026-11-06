@@ -8,7 +8,7 @@ local here = fs.getDir(shell.getRunningProgram())
 local BALLISTICS = "lib/ballistics.lua"
 local GUN = "lib/gun.lua"
 local LOADER = "startup/00_gunlib.lua"
-local HELP = "gunhelp.lua"
+local HELP = "help/gunLib.md"
 local AIM_EXAMPLE = "gun_aim_example.lua"
 local TRACK_EXAMPLE = "gun_track_example.lua"
 
@@ -32,7 +32,8 @@ end
 copy("ballistics.lua", BALLISTICS)
 copy("gun.lua", GUN)
 copy("loader.lua", LOADER)
-copy("gunhelp.lua", HELP)
+copy("gunLib.md", HELP)
+if fs.exists("gunhelp.lua") then fs.delete("gunhelp.lua") end -- replaced by help gunLib
 if not fs.exists(AIM_EXAMPLE) then copy("example_aim.lua", AIM_EXAMPLE) end
 if not fs.exists(TRACK_EXAMPLE) then copy("example_track.lua", TRACK_EXAMPLE) end
 
@@ -46,5 +47,5 @@ print("  /" .. LOADER)
 print("  /" .. HELP)
 print("  /" .. AIM_EXAMPLE .. ", /" .. TRACK_EXAMPLE .. " (examples)")
 print('Use: local gun = require("gun")')
-print("Help: gunhelp")
+print("Help: help gunLib")
 print("You can remove the disk now.")

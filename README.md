@@ -18,7 +18,7 @@ wget run https://raw.githubusercontent.com/cfifskin/gunLib/main/gun_disk/get.lua
 
 ## Справка на компьютере
 
-После установки справка доступна прямо в игре из любой папки: `gunhelp` показывает список тем, `gunhelp track` — одну тему.
+После установки справка открывается как обычная тема CraftOS: `help gunLib`. Регистр букв важен. Стрелки вверх и вниз прокручивают текст, влево и вправо переходят между разделами, Q закрывает.
 
 ## Состав
 
@@ -34,7 +34,7 @@ wget run https://raw.githubusercontent.com/cfifskin/gunLib/main/gun_disk/get.lua
 | `loader.lua` | Ставится как `/startup/00_gunlib.lua` и делает `require("gun")` и `require("ballistics")` доступными из любой папки |
 | `example_aim.lua` | Пример выстрела по координатам. Копируется в `/gun_aim_example.lua`, если такого файла ещё нет |
 | `example_track.lua` | Пример слежения за целью с радара. Копируется в `/gun_track_example.lua`, если такого файла ещё нет. Только этому примеру нужна библиотека `radar` |
-| `gunhelp.lua` | Справка для компьютера, ставится как `/gunhelp.lua` |
+| `gunLib.md` | Справка для компьютера, ставится как `/help/gunLib.md` |
 | `get.lua` | Установка с GitHub одной командой |
 
 ## Установка с дискеты
